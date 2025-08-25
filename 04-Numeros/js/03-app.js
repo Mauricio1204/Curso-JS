@@ -23,4 +23,11 @@ resultado = Math.abs(-200);
 resultado= Math.pow(8,3);
 //Saber cual es el minimo de una serie de numeros en deonde resibe x cantidad de numeros y devuelbe el menor
 resultado = Math.min(7,8,9,4,5,-1)
+//maximo
+resultado = Math.min(7,8,9,4,5,-1)
+//Aleateorio usualmente este metodo da resultados desimales pero lo podemos multiplicar por algun valor entero para optener resultados mallores a un valor de  0. infinito
+//resultado = Math.random()*20
+//Aleatorio dentro de un rango esta forma nos dara un resultado con de entre 0 y 30 
+resultado = Math.floor( Math.random()*30)
+
 console.log(resultado);
