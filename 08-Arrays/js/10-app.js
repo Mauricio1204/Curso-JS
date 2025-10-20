@@ -22,7 +22,8 @@ carrito.map( function( producto){
 const nuevoArreglo = carrito.forEach( function( producto){
     return`${producto.nombre}- Presio: ${producto.precio}`;
 });
-//Esto sirve cuanod nesecitamos crear nuevos metodos apartir de los datos con un diferinciador en especifico
+//Esto sirve cuando nesecitamos crear nuevos metodos apartir de los datos con un diferinciador en especifico
+
 const nuevoArreglo2 =carrito.map( function( producto){
     return`${producto.nombre}- Presio: ${producto.precio}`;
 });
