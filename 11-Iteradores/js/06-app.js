@@ -14,3 +14,22 @@ pendientes.forEach((pendientes,indice) => {
     
 })
 
+
+
+//Ejemplo 3
+const carrito = [
+    {nombre: 'Monitor 15 pulgadas ', precio: 150},
+    {nombre: 'Monitor 33 pulgadas ', precio: 250},
+    {nombre: 'Monitor 55 pulgadas ', precio: 350},
+    {nombre: 'Monitor 70 pulgadas ', precio: 450},
+    {nombre: 'Monitor 80 pulgadas ', precio: 650},
+    {nombre: 'Monitor 90 pulgadas ', precio: 750},
+]
+//Si aplicamos las reglas entes vistas podemos quitar las llavez y los parentecisi danto un aspecto mas compacto y limpio
+//Como estamos mostrando un objeto recordemos que podemos acceder a las caracteristicas con el punto
+const nuevoArreglo = carrito.forEach( prducto => console.log(prducto.nombre,':',prducto.precio ));
+
+const nuevoArreglo2 = carrito.forEach( prducto => console.log(prducto.nombre,':',prducto.precio ));
+
+
+
