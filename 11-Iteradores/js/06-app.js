@@ -27,9 +27,20 @@ const carrito = [
 ]
 //Si aplicamos las reglas entes vistas podemos quitar las llavez y los parentecisi danto un aspecto mas compacto y limpio
 //Como estamos mostrando un objeto recordemos que podemos acceder a las caracteristicas con el punto
-const nuevoArreglo = carrito.forEach( prducto => console.log(prducto.nombre,':',prducto.precio ));
+const nuevoArreglo = carrito.forEach( prducto => prducto.nombre,);
 
-const nuevoArreglo2 = carrito.forEach( prducto => console.log(prducto.nombre,':',prducto.precio ));
+//La sintaxis para el map es la misma
+//La diferencia es que "MAP" crea un arreglo nuevo y "Foreach" no creo un arreglo nuevo
+
+const nuevoArreglo2 = carrito.map( prducto => prducto.nombre);
+
+console.log(nuevoArreglo);
+
+console.log(nuevoArreglo2);
+
+
+
+
 
 
 
