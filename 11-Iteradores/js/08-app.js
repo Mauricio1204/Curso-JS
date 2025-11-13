@@ -32,6 +32,7 @@ const automovil = {
 //De esta forma podemos iterar sobre los valores de un objeto y otro sobre los arreglos normales 
 for(let [ llave ,Valor] of Object.entries(automovil)) {
     console.log(Valor);
+    console.log(llave);
     
 
 }
