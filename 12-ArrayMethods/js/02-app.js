@@ -1,6 +1,6 @@
-//fin
+//Ejemplo de arrglo digamos tradicional.
 const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'];
-
+//Ejemplo de arreglo de opjetos.
 const carrito = [
     { nombre: 'Monitor 27 Pulgadas', precio: 500 },
     { nombre: 'Televisión', precio: 100 },
@@ -23,5 +23,15 @@ if (mes === 'Mayo'){
 // para pasarlo a un array method existe uno llamado findIndex 
 //si le masamos un valor que no exista dara como resultado un -1
 //eso quiere deicir que no lo encontro
-const indice = meses.findIndex( mes => mes === 'Enero' ); 
-console.log(indice);
+const indice = meses.findIndex( mes => mes === 'Enera' ); 
+//console.log(indice);
+//asiCnamos el valor al -1 que nos debuelve la comprovación anterios
+if (indice >= 0) {
+ console.log(`Encontrado posicion ${indice}`);    
+}else{
+    console.log('No encontrado'); 
+}
+//Ejercico intenta comprobar algunode los valores del arreglo de objetos
+const indice2 = carrito.findIndex( producto => producto.precio === 100);
+console.log(indice2);
+
