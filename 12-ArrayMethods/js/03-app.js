@@ -21,6 +21,10 @@ console.log(total);
 // 1 es el valor anterior o valor previo 
 // 2 el valor actual 
 // es decir el valor del nuevo producto
-let resultado = carrito.reduce(total, producto =>  )
+// No ponemos el simbolo "+=" porque como estamos pasando dos argumentos ya 
+// sabe que el valor se almacena en el primer parametro pero dembemos poner una coma y asisgnar el valor en que iniciara que en este caso sera "0"
+//Esta forma es la mas moderna por asi decirlo
+let resultado = carrito.reduce( (total, producto) => total + producto.precio )
+console.log(resultado);
 
  
