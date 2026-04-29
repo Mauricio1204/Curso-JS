@@ -20,7 +20,7 @@ document.querySelector('.contenido-hero h1').textContent = nuevaHeading; */
 
  //Modificando imagenes
 
- const imagen = document.querySlector('.card img');
+ const imagen = document.querySelector('.card img');
  //para poder acceder a los atributos de la imagen es por medio de un SRC porque es como si fuera un objeto 
  imagen.src = 'img/hacer2.jpg';
  //console.log(imagen);
