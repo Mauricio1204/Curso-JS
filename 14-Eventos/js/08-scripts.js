@@ -1,3 +1,4 @@
+// NOTAS MIAS: esto es evitar el bubbling con un metodo 
 // Evitar la propagación con contenido creado...
 const parrafo1 = document.createElement('P');
 parrafo1.textContent = 'Concierto';
@@ -13,7 +14,16 @@ parrafo2.classList.add('titulo');
 const parrafo3 = document.createElement('p');
 parrafo3.textContent = '$800 por persona';
 parrafo3.classList.add('precio');
-
+//CODIGO MIO: bamos a agrar una funcion
+// parrafo3.onclick = nuevaFuncion;
+// NOTAS MIAS: si quisieramos agregar parametros a la funcion la estructura es diferente 
+// NOTAS MIAS: Esta forma funciona pero recordemos que tambien podemos utlizar un arrowfuntion 
+parrafo3.onclick = () => {
+    nuevaFuncion1(2)
+};
+parrafo3.onclick = function(){
+    nuevaFuncion(1)
+};
 // crear el div...
 const info = document.createElement('div');
 info.classList.add('info');
@@ -38,3 +48,13 @@ contenedorCard.appendChild(info);
 // Insertarlo en el HTML...
 const contenedor = document.querySelector('.hacer .contenedor-cards');
 contenedor.appendChild(contenedorCard); // al inicio info
+
+// NOTAS MIAS: esta tecnica funciona bien cuando generas contenido con HTML "SCRIPTING"
+// CODIGO MIO: 
+/* function nuevaFuncion(id) {
+    console.log('Desde nueva Funcion forma tradicional',id);    
+}
+ */
+function nuevaFuncion1(id) {
+    console.log('Desde nueva Funcion forma arrowFuction',id);    
+}
