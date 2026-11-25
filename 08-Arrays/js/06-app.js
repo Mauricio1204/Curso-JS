@@ -42,7 +42,7 @@ let resultado;
 //Esta forma esta más relacionada con la programacion funcional
 //Basicamente lo que hace es en la primera va toma una copia del carrito y agrega el produto
 //despues toma el producto2 y le ensima el resultado anterior y por ultimo toma primero el resultado y depues 
-//le claba el producto3, podemos manupular el orden de los registros si cambiamos primero la variable y despues lo que queremos agregar
+//le claba el producto3, podemos manipular el orden de los registros si cambiamos primero la variable y despues lo que queremos agregar
 //o primero lo que queremos agregar y depues lo que ya teniamos almacenado previo
 
 

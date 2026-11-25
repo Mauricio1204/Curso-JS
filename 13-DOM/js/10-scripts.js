@@ -20,9 +20,9 @@ enlace.onclick = miFuncion;
 
 //una vez creado el elmento lo ideal seria mostrarlo entonses seleccionaremos la navegacion 
 const navegacion = document.querySelector('.navegacion');
-//Agregamos el nuevo componente hijo a donde queremos mostrarlo eso lo asemos atraves de appendChild  al utilizar esta forma lo colocara al finar de todos los elemetos que tengan el pare
+//Agregamos el nuevo componente hijo a donde queremos mostrarlo eso lo asemos atraves de appendChild  al utilizar esta forma lo colocara al final de todos los elemetos que tengan el pare
 navegacion.appendChild(enlace); 
-//si quisieramos tener el con trol de donde lo agregariamos utilizariamos insertBefore que utiliza 2 argumentos 1 es el elemto que queremos agregar
+//si quisieramos tener el control de donde lo agregariamos utilizariamos insertBefore que utiliza 2 argumentos 1 es el elemto que queremos agregar
 //2 el indice de donde queremos mostrarlo ejemplo de esta forma seleccionamos la navegacion y damos el indice de la posicion 
 // que queramos que tome el elemto que agregaremos ejemplo:
 navegacion.insertBefore(enlace,navegacion.children[1]); 

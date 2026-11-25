@@ -8,6 +8,7 @@ const carrito = document.querySelector('#carrito');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const vaciarCarrito = document.querySelector('vaciar-carrito'); 
 const listaCursos = document.querySelector('#lista-cursos');
+ let articulosCarrito =[];//Variable carrito de compras
 
 cargarEventListeners();// Es para que no querden en nuestra ventana golbal
 //VAMMOS A REGISTRAR TODOS NUESTROS EVEN LISTENER
@@ -35,7 +36,7 @@ function agregarCurso (e){
 // Lee el contenido del HTML al que dimos click y extrae la informacion del curso
 function lerrDatosCurso(curso){//El nombre del parametro que pasamos puede ser el que nosotros queramos
     // Pasamos el curso Seleccionado 
-    console.log(curso);
+    // console.log(curso);
     //Crear un opjeto con el contenido del curso actual "son los detalles del curso seleccionado"
     const infoCurso = {
         img:curso.querySelector('img').src,
@@ -43,11 +44,47 @@ function lerrDatosCurso(curso){//El nombre del parametro que pasamos puede ser e
         precioDescuento: curso.querySelector( '.precio span').textContent,
         id: curso.querySelector('a').getAttribute('data-id'),
         cantidad:1 
-
     }
     
-    console.log(infoCurso);
-    
+     // console.log(infoCurso);
+
+    //agrega elemetos al arreglo de carrito,utilizaremos el spreadOperator para ir llenado el arreglo
+    //La primera vez estaria vasio pero si agregamos un curso entonses nesecitaremos la referencia del articulo que ya aviamos agregado para no perder el hilo del carrito
+    articulosCarrito = [...articulosCarrito,infoCurso];
+    console.log(articulosCarrito);
+    carritoHTML();
 }
+// Muestra el carrito de compras en HTML con esto estamos contrullendo el HTML apartir de articulosCarrito 
+function carritoHTML(){//esta funcion tiene que ser llamada despues de ler los datos del curso
+
+    //Limpiar HTML
+    limpiarHTML();
+    // Recorre el Carrito y genera el HTML
+
+    articulosCarrito.forEach(curso => {// tenemos que iterar un arreglo ay varias maneras pero una sencilla es forEach, Recuerda que cuando solo le pasas un valor solo requieres el nombre del opjeto actual y vamos a ponerlo aqui
+         const row = document.createElement('tr')//por cada elemento de carrito crearemos un TR por eso un createElement
+         row.innerHTML=/*Creamos un templeString o templeLiteral   esta es una forma sencilla de agregar el HTML con "innerHTML" */
+         `
+         <td> <img src="${curso.img}" width="100"> </td>
+         <td>${curso.titulo}</td>
+         <td>${curso.precioDescuento}</td>
+         <td>${curso.cantidad}</td>
+         `;
+          
+
+
+         //Agrega el HTML del carrito en el Tbody 
+         contenedorCarrito.appendChild(row);//appendChild  al utilizar esta forma lo colocara al final de todos los elemetos pero tenemos que limpiar el HTML porque recordemos que guarda el historial de lo que estemos agregando al final
+         })
+    }
  
+    //Elimina los cursos del Tbody 
+    function limpiarHTML(){
+        //Forma lente
+        // contenedorCarrito.innerHTML='';
+        while (contenedorCarrito.firstChild) {
+            contenedorCarrito.removeChild(contenedorCarrito.firstChild)
+            
+        }
+    }
  
